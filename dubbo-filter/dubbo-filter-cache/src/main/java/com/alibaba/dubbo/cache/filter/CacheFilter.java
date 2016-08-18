@@ -39,7 +39,8 @@ public class CacheFilter implements Filter {
     private CacheFactory cacheFactory;
 
     public void setCacheFactory(CacheFactory cacheFactory) {
-        this.cacheFactory = cacheFactory;
+        //this.cacheFactory = cacheFactory;
+        this.cacheFactory = new CacheFactoryAdpative();
     }
 
     public Result invoke(Invoker<?> invoker, Invocation invocation) throws RpcException {
