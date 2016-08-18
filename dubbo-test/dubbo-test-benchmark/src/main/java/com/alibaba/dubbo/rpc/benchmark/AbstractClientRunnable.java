@@ -8,8 +8,7 @@ import java.util.List;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.CyclicBarrier;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import org.apache.log4j.Logger;
 
 /**
  * Simple Processor RPC Benchmark Client Thread
@@ -18,7 +17,7 @@ import org.apache.commons.logging.LogFactory;
  */
 public abstract class AbstractClientRunnable implements ClientRunnable {
 
-    private static final Log LOGGER             = LogFactory.getLog(AbstractClientRunnable.class);
+    private static final Logger LOGGER             = Logger.getLogger(AbstractClientRunnable.class);
 
     private CyclicBarrier    barrier;
 
